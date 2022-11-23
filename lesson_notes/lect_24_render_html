@@ -1,0 +1,24 @@
+## Why two iffrent urls.py files?
+<b>recipes.urls:</b> gets all ulrs from recipes.views<br>
+<b>recipes.urls:</b> gets all ulrs from recipes.urls with<br>
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('recipes.urls'))
+```
+## Render a html file
+recipes.views
+```html
+def home(request):
+    return render('home.html')
+```
+
+## Settings
+ - Inform the apps used
+project > settings.py > INSTALLED_APPS
+ - Inform where are the templates
