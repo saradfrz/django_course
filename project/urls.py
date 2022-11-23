@@ -18,11 +18,21 @@ from django.http import HttpResponse
 from django.urls import path
 
 
-def my_view(request):
-    return HttpResponse('Uma linda query')
+def home(request):
+    return HttpResponse('Home')
+
+
+def contato(request):
+    return HttpResponse('Contato')
+
+
+def sobre(request):
+    return HttpResponse('sobre')
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', my_view)
+    path('', home),
+    path('sobre/', sobre),  # Duplicate linde down: shit + alt + downarrow
+    path('contato/', contato)
 ]

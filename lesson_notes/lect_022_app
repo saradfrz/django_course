@@ -1,0 +1,4 @@
+# Create an app
+
+`python manage.py startapp recipes`
+
